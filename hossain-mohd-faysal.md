@@ -1,13 +1,12 @@
 ---
 layout: page
 permalink: /hossain-mohd-faysal/index.html
-title: HOSSAIN MOHAMMAD FAYSAL
-tags: [Hossain, Mohd, Faysal, hmfaysal]
+title: YI-PING SHIH
 image:
   feature: Hossain-Mohd-Faysal.jpg
 ---
 
-  <img src="{{ site.url }}/images/hossain-faysal.jpg" alt="Hossain Mohammad Faysal">
+  <img src="{{ site.url }}/images/hossain-faysal.jpg" alt="Yi-Ping Shih">
 
 
 My name is **Hossain Mohd. Faysal**, and this is my personal blog.  
