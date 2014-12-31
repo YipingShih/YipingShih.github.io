@@ -1,6 +1,7 @@
 ---
 layout: post
 title: First Commit
+date: 2014-12-31 00:10:00 +08:00
 description: ""
 headline: ""
 categories: personal
@@ -9,6 +10,7 @@ tags:
 comments: true
 mathjax: null
 featured: true
+share: false
 published: true
 ---
 

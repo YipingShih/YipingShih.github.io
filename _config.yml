@@ -120,6 +120,8 @@ prose:
               value: android
             - name: "Python"
               value: python
+            - name: "Jekyll"
+              value: jekyll
             - name: "Interesting"
               value: interesting
           alterable: true
