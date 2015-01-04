@@ -75,7 +75,7 @@ published: true
 ## Declaring Component Capabilities
 	
 
-在上一篇 <a href="/android/2014/06/02/Application_Fundamentals_Part_1.html" target="_new">Application Fundamentals Part 1</a> 裡提到過，我們可以使用 <code>Intent</code> 來啟動 activity、service 及 broadcast receiver。除了可以用 explicit intent 明確指定 intent 接收對象 (標明 component 的 class 名稱) 來做到這件事之外，implicit intent 的使用範圍和用途相對更廣一些。一個 implicit intent 所指定的是想要達成的 action (同時你也可以選擇是否要將 action 所需要的資料放進 intent)，系統會在裝置上搜尋，找到能夠執行這個 action 的 component 並將其啟動，如果有不只一個 component 可以執行，則使用者可以從中選擇一個啟動。
+在上一篇 <a href="/android/2014/12/31/Application_Fundamentals_Part_1.html" target="_new">Application Fundamentals Part 1</a> 裡提到過，我們可以使用 <code>Intent</code> 來啟動 activity、service 及 broadcast receiver。除了可以用 explicit intent 明確指定 intent 接收對象 (標明 component 的 class 名稱) 來做到這件事之外，implicit intent 的使用範圍和用途相對更廣一些。一個 implicit intent 所指定的是想要達成的 action (同時你也可以選擇是否要將 action 所需要的資料放進 intent)，系統會在裝置上搜尋，找到能夠執行這個 action 的 component 並將其啟動，如果有不只一個 component 可以執行，則使用者可以從中選擇一個啟動。
 
 
 那系統要怎麼知道有哪些 component 符合某個 intent 的需求呢？就是將收到的 intent 與裝置上的 app 在 manifest 檔案裡列出的 intent filter 做比較。
