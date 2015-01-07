@@ -13,6 +13,7 @@ mathjax: null
 featured: false
 share: true
 published: true
+thumb: thumb_default.png
 ---
 
 When you want to collect data from your app, if the data is for temporary use, passing data to Google forms may be a better option than implementing your own server-side APIs. This article shows how to send HTTP POST request from Android application to Google form.
