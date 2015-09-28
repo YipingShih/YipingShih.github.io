@@ -13,7 +13,8 @@ mathjax: null
 featured: false
 share: true
 published: true
-thumb: thumb_default.png
+image:
+  thumb: thumb_default.png
 ---
 
 When you want to collect data from your app, if the data is for temporary use, passing data to Google forms may be a better option than implementing your own server-side APIs. This article shows how to send HTTP POST request from Android application to Google form.
@@ -46,8 +47,11 @@ For question 2, which is a checkboxes question in this example, get the name att
 
 OK, now you've got all the things you need! It's time to go back to your Android project.
 
+If you're familiar with Android development, you can skip the demonstrated Activity below. All you need to know is to send POST request to **https://docs.google.com/forms/d/YOUR_GOOGLE_FORM_ID/formResponse** with name-value pairs **(ENTRY_NAME, VALUE)**, e.g. ("entry.1075601256", "yooo").
+
 In your Android project, get the data you want and send them with HTTP POST methods.
 
+{% highlight java %}
     public class Main extends Activity {
 
         final String GOOGLE_FORM_ID = "1rJGPa_xJKugj5gDlm98CIT5khIEvHUOagmDMaykGzAM";
@@ -125,6 +129,7 @@ In your Android project, get the data you want and send them with HTTP POST meth
             alert.show();
         }
     }
+{% endhighlight %}
 
 Here's what the activity looks like:
 

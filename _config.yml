@@ -48,6 +48,7 @@ links:
 timezone:    Asia/Taipei
 future:      true
 highlighter: pygments
+pygments:    true
 markdown:    kramdown
 paginate:    5
 paginate_path: "page:num"
