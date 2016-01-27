@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable logcat on Huawei devices
-date: 2016-01-26 18:45:00 +08:00
+date: 2016-01-27 18:45:00 +08:00
 description: ""
 headline: ""
 categories: android
