@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fragments Part 1
-date: 2015-10-09 16:45:00 +08:00
+date: 2016-01-27 20:05:00 +08:00
 description: ""
 headline: ""
 categories: android
@@ -12,7 +12,7 @@ comments: true
 mathjax: null
 featured: false
 share: true
-published: false
+published: true
 ---
 
 
@@ -40,22 +40,16 @@ Android 從 3.0 (API level 11) 開始加入 fragment，以支援平板電腦等�
 舉個例子，一個新聞 app 可以用一個 fragment 在畫面的左邊顯示文章列表、另一個 fragment 在畫面的右邊顯示文章內容，兩個 fragment 同時出現在一個 activity 內，擁有各自的一組 lifecycle callback、各自處理自己收到的 input 事件。這樣一來，使用者就可以在同一個 activity 內選擇並讀取文章，而不用每次選擇完文章後都被帶到新的 activity，如下面圖一所說明的平板 layout 一樣。
 
 
-你應該把 fragment 設計成一個模型、可多次使用的 activity 元件。因為每個 fragment 都有自己的 layout 以及根據自己的 lifecycle callback 所決定的行為，你可以在多個 activity 內含有同樣的 fragment，所以在設計 fragment 時，你應該要考慮到重複使用性、並且避免用一個 fragment 去操作另一個 fragment。這件事格外重要是因為模組化的 fragment 使得你可以為不同的螢幕尺寸重新安排 fragment 之間的組合。
-
-This is especially important because a modular fragment allows you to change your fragment combinations for different screen sizes. When designing your application to support both tablets and handsets, you can reuse your fragments in different layout configurations to optimize the user experience based on the available screen space. For example, on a handset, it might be necessary to separate fragments to provide a single-pane UI when more than one cannot fit within the same activity.
+你應該把 fragment 設計成一個模型、可多次使用的 activity 元件。因為每個 fragment 都有自己的 layout 以及根據自己的 lifecycle callback 所決定的行為，你可以在多個 activity 內含有同樣的 fragment，所以在設計 fragment 時，你應該要考慮到重複使用性、並且避免用一個 fragment 去操作另一個 fragment。這件事格外重要是因為模組化的 fragment 使得你可以為不同的螢幕尺寸重新安排 fragment 之間的組合。當你要同時為平板及手機設計 app 介面時，你可以根據螢幕上能用的空間多寡來在不同的 layout 設定中重複使用你的 fragment，以優化使用者的體驗。舉個例子，在手機上時，由於一個 activity 塞不下多個 fragment 的介面，所以你可能需要把多個 fragment 拆開來、讓不同的 activity 一次呈現一個 fragment。
 
 
 <img border="0" src="/images/post_imgs/20151009_fragments.png" />
 
 
-Figure 1. An example of how two UI modules defined by fragments can be combined into one activity for a tablet design, but separated for a handset design.
-
-For example—to continue with the news application example—the application can embed two fragments in Activity A, when running on a tablet-sized device. However, on a handset-sized screen, there's not enough room for both fragments, so Activity A includes only the fragment for the list of articles, and when the user selects an article, it starts Activity B, which includes the second fragment to read the article. Thus, the application supports both tablets and handsets by reusing fragments in different combinations, as illustrated in figure 1.
-
-For more information about designing your application with different fragment combinations for different screen configurations, see the guide to Supporting Tablets and Handsets.
+圖一，舉例說明在平板上可以組合兩個 fragment 的面板來呈現一個 activity，而同時在手機上則分開成兩個 activity 來運作。
 
 
-
+繼續前面段落以新聞 app 所舉的例子：app 在平板裝置上時可以同時在 <code>Activity</code> A 上面呈現兩個 fragment，但是，當在手機螢幕上時，因為螢幕的空間不足，所以 <code>Activity</code> A 僅呈現文章的列表，當使用者點選了一篇文章的標題時，app start <code>Activity</code> B，在介面上呈現第二個 fragment 來顯示文章。這樣的設計使得 app 可以藉由組合 fragment 的使用來同時支援平板及手機，最佳化兩者的使用者體驗。
 
 
 本篇主要翻譯自官方文件 [Fragments](https://developer.android.com/guide/components/fragments.html){:target="_blank"} 。
